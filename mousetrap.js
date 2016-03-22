@@ -972,7 +972,7 @@
         }
 
         // stop for input, select, and textarea
-        return element.tagName == 'INPUT' || element.tagName == 'SELECT' || element.tagName == 'TEXTAREA' || element.isContentEditable;
+        return false; //element.tagName == 'INPUT' || element.tagName == 'SELECT' || element.tagName == 'TEXTAREA' || element.isContentEditable
     };
 
     /**
@@ -1014,7 +1014,7 @@
 
     // expose mousetrap as an AMD module
     if (typeof define === 'function' && define.amd) {
-        define(function() {
+        define("mousetrap", function() {
             return Mousetrap;
         });
     }
